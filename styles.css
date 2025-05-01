@@ -104,6 +104,10 @@ h1{
     text-align: center;
 }
 
+h1 a{
+	color: var(--red);
+}
+
 h2{
     font-size: 1.75rem;
     padding: 0.5rem;
