@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    --green: #29BF12;
+    --teal: #08BDBD;
+    --red: #F21B3F;
+    --white: #FFF;
+    --dk-gray: #363432;
+
+    --filter-shadow-sm: drop-shadow(-3px 3px 7px var(--med-gray));
+    --filter-shadow-lg: drop-shadow(-6px 6px 10px var(--med-gray));
+
+    --fonts: "baskerville", "novantique-script", sans-serif;
+}
+
+body{
+    background-color: var(--teal);
+    background-image: url(images/topography.svg);
+    line-height: 1.5;
+    font-family: var(--fonts);
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+header, main, footer{
+	background-color: var(--teal);
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	box-shadow: var(--box-shadow-lg);
+}
+
+header{
+    background-image: url(images/swiss-valley.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 75%;
+    height: 420px;
+    margin: 0 auto;
+    align-items: center;
+    display: grid;
+	grid-template-rows: 1fr 1fr;
+	gap: 1rem;
+    border-radius: 8px;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 0 auto;
+    font-family: "novantique-script", sans-serif;
+    color: var(--red);
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.75rem;
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+h3{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+nav ul{
+    list-style-type: none;
+	padding: 0;
+    display: grid;
+    grid-template-columns: 1fr .25fr 1fr;
+    gap: .5rem;
+    text-align: center;
+    height: 200px;
+}
+
+nav a{
+    text-decoration: none;
+    padding: .5rem;
+    border-bottom: 4px solid var(--red);
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: var(--red);
+	color: var(--white);
+	border-radius: 8px;
+	box-shadow: var(--box-shadow-lg);
+}
+nav a:hover{
+    border-color: var(--white);
+}
+
+main{
+    width: 75%;
+    margin: 0 auto;
+    background: var(--teal);
+    border-radius: 8px;
+}
+
+main > section{
+	padding: 1rem 1rem 3rem 1rem;
+}
+
+div > section{
+	width: 500px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+img{
+	display: block;
+	width: 100%;
+    border-radius: 8px;
+}
+
+p{
+	width: 100%;
+	max-width: 65ch;
+	margin: 0 auto;
+	padding: 1rem 0;
+	font-size: 1.2rem;
+}
+
+#grid-parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    border: 3px groove var(--white);
+    border-radius: 8px;
+}
+
+
+
+#amenities{
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#retreat{
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 8px;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 8px;
+}
+
+fieldset{
+	border-radius: 8px;
+	border: 3px groove var(--white);
+	display: flex;
+    padding: 0.35em 0.75em 0.625em 0.75em;
+}
+
+input, select, textarea{
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+#my-comments{
+    height: 100px;
+}
+
+legend, label {
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: var(--teal);
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: -6px 6px 10px var(--dk-gray);
+}
+
+input:invalid, select:invalid, textarea:invalid {
+    border: 4px solid var(--red);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 3px solid var(--white);
+}
+
+input[type="submit"]:focus {
+    outline: 3px solid var(--white);
+}
+
+input[type="submit"]:hover {
+    box-shadow: -3px 3px 5px var(--dk-gray);
+}
+
+input[type="radio"] + label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+footer{
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+    border-radius: 8px;
+}
